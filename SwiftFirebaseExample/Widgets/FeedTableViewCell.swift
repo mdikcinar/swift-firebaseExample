@@ -9,6 +9,12 @@ import UIKit
 
 class FeedTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var lblTitle: UILabel!
+    @IBOutlet weak var lblDescription: UILabel!
+    @IBOutlet weak var lblCategory: UILabel!
+    @IBOutlet weak var btnVote: UIButton!
+    @IBOutlet weak var btnDelete: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

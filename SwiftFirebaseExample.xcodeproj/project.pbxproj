@@ -24,6 +24,9 @@
 		843D7AF328AE1A850036C443 /* AuthProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D7AF228AE1A850036C443 /* AuthProtocol.swift */; };
 		843D7AF528AE1BCB0036C443 /* DataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D7AF428AE1BCB0036C443 /* DataProtocol.swift */; };
 		843D7AF728AE3D6C0036C443 /* ToastExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D7AF628AE3D6C0036C443 /* ToastExtension.swift */; };
+		84EDFE2728B1364B00EE2E73 /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EDFE2628B1364B00EE2E73 /* IntExtension.swift */; };
+		84F3F60B28AEB10000051373 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F3F60A28AEB10000051373 /* UserModel.swift */; };
+		84F3F60D28AEB8FF00051373 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F3F60C28AEB8FF00051373 /* PostModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +51,9 @@
 		843D7AF228AE1A850036C443 /* AuthProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProtocol.swift; sourceTree = "<group>"; };
 		843D7AF428AE1BCB0036C443 /* DataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProtocol.swift; sourceTree = "<group>"; };
 		843D7AF628AE3D6C0036C443 /* ToastExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastExtension.swift; sourceTree = "<group>"; };
+		84EDFE2628B1364B00EE2E73 /* IntExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
+		84F3F60A28AEB10000051373 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		84F3F60C28AEB8FF00051373 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,14 +97,14 @@
 		843D7AC028AB79F70036C443 /* SwiftFirebaseExample */ = {
 			isa = PBXGroup;
 			children = (
-				843D7AE128AE11B70036C443 /* Helpers */,
+				843D7ADE28AE11910036C443 /* Delegates */,
 				843D7AF128AE1A660036C443 /* Protocols */,
 				843D7AE028AE11AF0036C443 /* Services */,
 				843D7ADF28AE11A90036C443 /* Models */,
-				843D7ADE28AE11910036C443 /* Delegates */,
 				843D7ADD28AE117F0036C443 /* Controllers */,
 				843D7AEC28AE175C0036C443 /* Widgets */,
 				843D7ADC28AE11630036C443 /* Views */,
+				843D7AE128AE11B70036C443 /* Helpers */,
 				843D7ACA28AB79F80036C443 /* Assets.xcassets */,
 				843D7ACF28AB79F80036C443 /* Info.plist */,
 				843D7AE228AE13E80036C443 /* GoogleService-Info.plist */,
@@ -138,6 +144,8 @@
 		843D7ADF28AE11A90036C443 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				84F3F60A28AEB10000051373 /* UserModel.swift */,
+				84F3F60C28AEB8FF00051373 /* PostModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -155,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				843D7AF628AE3D6C0036C443 /* ToastExtension.swift */,
+				84EDFE2628B1364B00EE2E73 /* IntExtension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -301,12 +310,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84F3F60B28AEB10000051373 /* UserModel.swift in Sources */,
 				843D7AC628AB79F70036C443 /* FeedViewController.swift in Sources */,
 				843D7AF328AE1A850036C443 /* AuthProtocol.swift in Sources */,
+				84F3F60D28AEB8FF00051373 /* PostModel.swift in Sources */,
 				843D7AEE28AE17AC0036C443 /* FeedTableViewCell.swift in Sources */,
 				843D7AEB28AE172A0036C443 /* SignUpViewController.swift in Sources */,
 				843D7AF528AE1BCB0036C443 /* DataProtocol.swift in Sources */,
 				843D7AF028AE1A3C0036C443 /* AuthService.swift in Sources */,
+				84EDFE2728B1364B00EE2E73 /* IntExtension.swift in Sources */,
 				843D7AC228AB79F70036C443 /* AppDelegate.swift in Sources */,
 				843D7AE928AE171E0036C443 /* SignInViewController.swift in Sources */,
 				843D7AC428AB79F70036C443 /* SceneDelegate.swift in Sources */,

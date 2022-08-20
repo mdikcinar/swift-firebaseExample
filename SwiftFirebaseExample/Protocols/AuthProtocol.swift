@@ -10,5 +10,9 @@ import Foundation
 
 protocol AuthProtocol{
     func signInWithEmailPassword(email:String, password:String, onError:((String) -> Void)?, onSuccess:(() -> Void)?)
+    func signUp(email:String, password:String, onError:((String) -> Void)?, onSuccess:(() -> Void)?)
     func signOut() throws
+    var userModel: UserModel?{
+        get
+    }
 }

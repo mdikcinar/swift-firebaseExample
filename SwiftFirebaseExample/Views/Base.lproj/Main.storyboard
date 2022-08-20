@@ -21,7 +21,11 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="Title" id="oO7-qj-Yct">
-                                        <barButtonItem key="rightBarButtonItem" title="Logout" image="rectangle.portrait.and.arrow.right" catalog="system" id="Xu6-CL-2UM"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Logout" image="rectangle.portrait.and.arrow.right" catalog="system" id="Xu6-CL-2UM">
+                                            <connections>
+                                                <action selector="btnLogOut:" destination="BYZ-38-t0r" id="Hww-jU-5v5"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -29,7 +33,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="110" id="oJb-pE-tcM" customClass="FeedTableViewCell" customModule="SwiftFirebaseExample" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="110" id="oJb-pE-tcM" customClass="FeedTableViewCell" customModule="SwiftFirebaseExample" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oJb-pE-tcM" id="Xhy-oX-Iyl">
@@ -43,7 +47,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oP6-ne-vny">
-                                                    <rect key="frame" x="20" y="44" width="374" height="18"/>
+                                                    <rect key="frame" x="20" y="47" width="374" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -79,19 +83,29 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="V5n-IC-SOn" secondAttribute="bottom" constant="5" id="4eO-64-Q7w"/>
+                                                <constraint firstAttribute="bottom" secondItem="V5n-IC-SOn" secondAttribute="bottom" constant="5" id="6BL-x5-Z2Y"/>
                                                 <constraint firstAttribute="bottom" secondItem="J0V-wr-XFh" secondAttribute="bottom" constant="5" id="7pH-Hu-SR2"/>
+                                                <constraint firstItem="V5n-IC-SOn" firstAttribute="leading" secondItem="Xhy-oX-Iyl" secondAttribute="leading" constant="10" id="7xf-eI-ELm"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="9CV-r5-Ndo" secondAttribute="trailing" id="Ahq-bK-YR8"/>
+                                                <constraint firstItem="oP6-ne-vny" firstAttribute="top" secondItem="9CV-r5-Ndo" secondAttribute="bottom" constant="13" id="CgB-4z-Ff7"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Jgg-gc-n1K" secondAttribute="trailing" constant="10" id="F0c-Mm-6Ai"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="oP6-ne-vny" secondAttribute="trailing" id="Fow-4S-12p"/>
+                                                <constraint firstItem="V5n-IC-SOn" firstAttribute="top" secondItem="oP6-ne-vny" secondAttribute="bottom" constant="10" id="LxQ-cQ-oR6"/>
                                                 <constraint firstItem="V5n-IC-SOn" firstAttribute="leading" secondItem="Xhy-oX-Iyl" secondAttribute="leading" constant="10" id="NDh-oz-l2L"/>
                                                 <constraint firstItem="J0V-wr-XFh" firstAttribute="leading" secondItem="V5n-IC-SOn" secondAttribute="trailing" constant="10" id="NgG-nA-NVI"/>
                                                 <constraint firstItem="9CV-r5-Ndo" firstAttribute="leading" secondItem="Xhy-oX-Iyl" secondAttribute="leadingMargin" id="TDX-06-iCF"/>
                                                 <constraint firstItem="oP6-ne-vny" firstAttribute="leading" secondItem="Xhy-oX-Iyl" secondAttribute="leadingMargin" id="XQn-8r-Sh4"/>
                                                 <constraint firstItem="9CV-r5-Ndo" firstAttribute="top" secondItem="Xhy-oX-Iyl" secondAttribute="topMargin" id="YBB-vn-P2n"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Jgg-gc-n1K" secondAttribute="bottom" constant="5" id="fTD-Ml-4aJ"/>
-                                                <constraint firstItem="oP6-ne-vny" firstAttribute="top" secondItem="9CV-r5-Ndo" secondAttribute="bottom" constant="10" id="tPd-Iz-4Ta"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="btnDelete" destination="J0V-wr-XFh" id="3m1-dn-UxY"/>
+                                            <outlet property="btnVote" destination="V5n-IC-SOn" id="heI-rF-VDe"/>
+                                            <outlet property="lblCategory" destination="Jgg-gc-n1K" id="HAx-JL-8jT"/>
+                                            <outlet property="lblDescription" destination="oP6-ne-vny" id="U7t-H4-59H"/>
+                                            <outlet property="lblTitle" destination="9CV-r5-Ndo" id="ANE-Nr-ygn"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -113,6 +127,11 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Feed" image="house" catalog="system" id="6mK-mG-RVv"/>
+                    <connections>
+                        <outlet property="btnLogOut" destination="Xu6-CL-2UM" id="xoM-FW-1x7"/>
+                        <outlet property="navBar" destination="TVS-br-VrA" id="35q-SC-5gV"/>
+                        <outlet property="tableView" destination="Cx4-B9-Xok" id="SWB-Tp-xyR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -151,7 +170,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ovm-ce-Lbt">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ovm-ce-Lbt">
                                 <rect key="frame" x="30" y="265" width="354" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="0wP-IL-lKv"/>
@@ -165,6 +184,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Send">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnSend:" destination="bgZ-aL-5NU" eventType="touchUpInside" id="p75-sX-Uro"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Post" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqx-Mo-yB0">
                                 <rect key="frame" x="30" y="54" width="354" height="24"/>
@@ -200,6 +222,11 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Post" image="square.and.arrow.up" catalog="system" id="U1V-JO-UsT"/>
+                    <connections>
+                        <outlet property="category" destination="8tv-Tl-b2V" id="4Bo-6b-kew"/>
+                        <outlet property="descriptionField" destination="Ovm-ce-Lbt" id="AXO-jm-dF2"/>
+                        <outlet property="titleField" destination="k0x-Uf-AhU" id="F4m-xr-FQf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s8h-ik-SiK" sceneMemberID="firstResponder"/>
             </objects>
@@ -211,6 +238,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Gur-Oe-9IE" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3gP-HE-0NN">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -391,6 +419,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Sign Up" titleAlignment="automatic">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnSignUp:" destination="MzZ-np-IiO" eventType="touchUpInside" id="tLH-qZ-U0Q"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="45Z-Nm-NK4">
                                 <rect key="frame" x="30" y="299" width="354" height="34"/>
@@ -427,6 +458,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Register" id="Hyi-T5-IfL"/>
+                    <connections>
+                        <outlet property="confirmPasswordField" destination="45Z-Nm-NK4" id="4W4-uU-VG7"/>
+                        <outlet property="emailField" destination="qjP-E2-Qhs" id="foG-hy-CX8"/>
+                        <outlet property="passwordField" destination="ZUc-NC-jzm" id="a2f-En-eZA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iV1-y1-O7p" sceneMemberID="firstResponder"/>
             </objects>

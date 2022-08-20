@@ -19,22 +19,21 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func btnSignIn(_ sender: Any) {
-        let email = emailField.text
-        let password = passwordField.text
-        guard email != nil, email != "", password != nil, password != ""  else{
+        let emailText = emailField.text
+        let passwordText = passwordField.text
+        guard emailText != nil, emailText != "", passwordText != nil, passwordText != ""  else{
             let errMsg = "Email and password can't be empty!!"
             self.showToast(message: errMsg)
             return
         }
         
-        authService.signInWithEmailPassword(email: email!,password: password!,
-            onError: { error in
+        authService.signInWithEmailPassword(email: emailText!,password: passwordText!){ error in
                 print("An error accured: \(error)")
-            },
+            }
              onSuccess: {
                 self.tabBarController?.selectedIndex = 0
             }
-        )
+        
     }
     
 
