@@ -55,10 +55,11 @@ class DataService: DataProtocol {
     }
     
     func getPosts(onLoaded:@escaping (([PostModel]) -> Void)) {
-        var postList = [PostModel]()
+        
         POST_REF.observe(.value, with: {(snapshot: DataSnapshot?) in
             if let snapshots = snapshot?.children.allObjects as? [DataSnapshot] {
                 let decoder = JSONDecoder()
+                var postList = [PostModel]()
                 for snap in snapshots{
                     if var postJson = snap.value as? [String: Any]{
                         postJson["id"] = snap.key
